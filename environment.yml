@@ -2,11 +2,9 @@ channels:
   - conda-forge
 
 dependencies:
-  - jupyterhub-singleuser>=3.0,<4.0
+  - openssh
 
-  # Everyone wants to use nbgitpuller for everything, so let's do that
-  - nbgitpuller=1.1.*
   # Install packages from pip
   - pip
   - pip:
-    - otter-grader
+    - jupyter-sshd-proxy
