@@ -4,6 +4,7 @@ FROM quay.io/pangeo/pangeo-notebook:2024.08.18
 COPY environment.yml /tmp/environment.yml
 
 RUN echo "CONDA DIR: $CONDA_DIR"
+RUN echo "CONDA ENV: $CONDA_ENV"
 RUN mamba env update --prefix ${CONDA_DIR} --file /tmp/environment.yml
 
 RUN echo "DEBUG -----------------------"
