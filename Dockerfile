@@ -7,4 +7,5 @@ RUN mamba env update --prefix ${NB_PYTHON_PREFIX} --file /tmp/environment.yml
 
 RUN conda list -n notebook | grep ssh
 
+COPY image-tests image-tests
 RUN ls
